@@ -14,8 +14,10 @@ extern u16 USART1_RX_STA;					//rx state
 extern u16 USART2_RX_STA;					//rx state
 
 
-void uart_init(u32 port, u32 bound);
+void uart_init(USART_TypeDef* USARTx, u32 bound);
 void uart1_init(u32 bound);
 void uart2_init(u32 bound);
 void USART1_send_buf(char *buf);
+void USART2_send_buf(char *buf);
+void USART_send_buf(USART_TypeDef* USARTx, char * buf);
 #endif
